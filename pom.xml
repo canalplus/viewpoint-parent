@@ -45,12 +45,12 @@
 		<repository>
 			<id>artifactoryAdmin</id>
 			<name>libs-release</name>
-			<url>http://ec2-54-76-116-198.eu-west-1.compute.amazonaws.com/artifactory/libs-release-local</url>
+			<url>http://ec2-54-171-204-66.eu-west-1.compute.amazonaws.com/artifactory/libs-release-local</url>
 		</repository>
 		<snapshotRepository>
 			<id>artifactoryAdmin</id>
 			<name>libs-snapshot</name>
-			<url>http://ec2-54-76-116-198.eu-west-1.compute.amazonaws.com/artifactory/libs-snapshot-local</url>
+			<url>http://ec2-54-171-204-66.eu-west-1.compute.amazonaws.com/artifactory/libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
 
