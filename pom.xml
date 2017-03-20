@@ -55,9 +55,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git://github.com/julienpoirier/viewpoint-parent.git</connection>
-		<developerConnection>scm:git:git@github.com:julienpoirier/viewpoint-parent.git</developerConnection>
-		<url>https://github.com/julienpoirier/viewpoint-parent</url>
+		<connection>scm:git:git://github.com/canalplus/viewpoint-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:canalplus/viewpoint-parent.git</developerConnection>
+		<url>https://github.com/canalplus/viewpoint-parent</url>
 	</scm>
 	<build>
 		<plugins>
@@ -68,6 +68,25 @@
 					<additionalparam>-Xdoclint:none</additionalparam>
 				</configuration>
 			</plugin>
+                    <plugin>
+                        <groupId>external.atlassian.jgitflow</groupId>
+                        <artifactId>jgitflow-maven-plugin</artifactId>
+                        <version>1.0-m5.1</version>
+                        <configuration>
+                                <allowSnapshots>true</allowSnapshots>
+                                <flowInitContext>
+                                        <masterBranchName>master</masterBranchName>
+                                        <developBranchName>develop</developBranchName>
+                                        <featureBranchPrefix>feature/</featureBranchPrefix>
+                                        <releaseBranchPrefix>release/</releaseBranchPrefix>
+                                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                                        <versionTagPrefix>v</versionTagPrefix>
+                                </flowInitContext>
+                                <autoVersionSubmodules>true</autoVersionSubmodules>
+                                <pushReleases>true</pushReleases>
+                                <pushHotfixes>true</pushHotfixes>
+                        </configuration>
+                </plugin>
 		</plugins>
 	</build>
 </project>
